@@ -7,10 +7,15 @@ function display(){
        
             let div=document.createElement('div');
     div.setAttribute('class','check');
-    div.innerHTML=`
-               <p class="head ${val.completed ? 'completed' : ''}">${val.val}</p>
-            <input type="checkbox" class="box">
-            <button class="btn2">remove task</button>`
+        div.innerHTML = `
+    <p class="head ${val.completed ? 'completed' : ''}">${val.val}</p>
+    <input type="checkbox" class="box" ${val.completed ? 'checked' : ''}>
+    <button class="btn2">remove task</button>
+`;
+    // div.innerHTML=`
+    //            <p class="head ${val.completed ? 'completed' : ''}">${val.val}</p>
+    //         <input type="checkbox" class="box">
+    //         <button class="btn2">remove task</button>`
             head.appendChild(div);
             //  input.value="";
             // localStorage.setItem("seconddiv",JSON.stringify(data));
